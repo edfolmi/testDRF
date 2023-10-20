@@ -1,8 +1,8 @@
 from django.urls import path, include
 
-#from rest_framework.urlpatterns import format_suffix_patterns
-
+# from rest_framework.urlpatterns import format_suffix_patterns
 from . import views
+
 
 urlpatterns = [
     path('api-auth/', include('rest_framework.urls', namespace='rest_framework')),
@@ -17,5 +17,3 @@ urlpatterns = [
     path('lists/', views.SnippetList.as_view(), name='snippets'),
     path('detail/<int:pk>/', views.SnippetDetail.as_view()),
 ]
-
-#urlpatterns = format_suffix_patterns(urlpatterns)
